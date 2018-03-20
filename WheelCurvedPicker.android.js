@@ -47,6 +47,8 @@ class WheelCurvedPicker extends React.Component {
 		selectedValue: PropTypes.any,
 
 		selectedIndex: PropTypes.number,
+
+		selectedLineColor: ColorPropType,
 	}
 
 	constructor(props){
@@ -56,7 +58,8 @@ class WheelCurvedPicker extends React.Component {
 
 	static defaultProps = {
 		itemStyle : {color:"white", fontSize:26},
-		itemSpace: 20
+		itemSpace: 20,
+		selectedLineColor: "black"
 	}
 
 	componentWillReceiveProps (props) {
