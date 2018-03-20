@@ -8,7 +8,7 @@ import {
 	requireNativeComponent,
 } from 'react-native';
 
-const defaultItemStyle = { color: 'white', fontSize: 26 };
+const defaultItemStyle = { color: 'white', fontSize: 26, selectedLineColor: "black" };
 
 const WheelCurvedPickerNativeInterface = {
 	name: 'WheelCurvedPicker',
