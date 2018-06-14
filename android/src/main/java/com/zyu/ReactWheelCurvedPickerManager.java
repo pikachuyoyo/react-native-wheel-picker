@@ -23,6 +23,7 @@ public class ReactWheelCurvedPickerManager extends SimpleViewManager<ReactWheelC
 
     private static final int DEFAULT_TEXT_SIZE = 25 * 2;
     private static final int DEFAULT_ITEM_SPACE = 14 * 2;
+    private static final int DEFAULT_ITEM_COUNT = 7;
 
     @Override
     protected ReactWheelCurvedPicker createViewInstance(ThemedReactContext reactContext) {
@@ -31,6 +32,7 @@ public class ReactWheelCurvedPickerManager extends SimpleViewManager<ReactWheelC
         picker.setCurrentTextColor(Color.WHITE);
         picker.setTextSize(DEFAULT_TEXT_SIZE);
         picker.setItemSpace(DEFAULT_ITEM_SPACE);
+        picker.setItemCount(DEFAULT_ITEM_COUNT);
 
         return picker;
     }
@@ -91,6 +93,13 @@ public class ReactWheelCurvedPickerManager extends SimpleViewManager<ReactWheelC
     public void setItemSpace(ReactWheelCurvedPicker picker, int space) {
         if (picker != null) {
             picker.setItemSpace((int) PixelUtil.toPixelFromDIP(space));
+        }
+    }
+
+    @ReactProp(name = "itemCount")
+    public void setItemCount(ReactWheelCurvedPicker picker, int itemCount) {
+        if (picker!=null){
+            picker.setItemCount((int) PixelUtil.toPixelFromDIP(itemCount));
         }
     }
 

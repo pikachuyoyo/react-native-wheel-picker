@@ -23,6 +23,7 @@ const WheelCurvedPickerNativeInterface = {
 		selectedValue: PropTypes.any,
 		selectedIndex: PropTypes.number,
 		selectedLineColor: ColorPropType,
+		itemCount: PropTypes.number,
 	}
 }
 
@@ -50,6 +51,9 @@ class WheelCurvedPicker extends React.Component {
 		selectedIndex: PropTypes.number,
 
 		selectedLineColor: ColorPropType,
+
+		itemCount: PropTypes.number,
+
 	}
 
 	constructor(props){
@@ -60,7 +64,8 @@ class WheelCurvedPicker extends React.Component {
 	static defaultProps = {
 		itemStyle : {color:"white", fontSize:26},
 		itemSpace: 20,
-		selectedLineColor: "black"
+		selectedLineColor: "black",
+		itemCount: 7
 	}
 
 	componentWillReceiveProps (props) {
